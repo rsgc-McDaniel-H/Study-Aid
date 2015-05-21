@@ -53,7 +53,7 @@ void draw() {
     }
 
     if (q == 3) { //if the question is equal to 3 
-      text("3) What Position dose carey play", 50, 200); //the second question
+      text("3) What Position does carey play", 50, 200); //the second question
 
       text("a) Bench", 100, 300); // answere 1
 
@@ -61,13 +61,23 @@ void draw() {
 
       text("c) Coach", 100, 400);// answere 3
     }
-    
+
     if (q == 4) { //if the question is equal to 3 
       text("4) Who is the biggest tank on the habs", 50, 200); //the second question
 
       text("a) Carey Price", 100, 300); // answere 1
 
       text("b) Alexei Emelin", 100, 350); // answere 2
+
+      text("c) Tomas Plekanec", 100, 400);// answere 3
+    }
+    
+    if (q == 5) { //if the question is equal to 3 
+      text("4) Who is the second biggest tank", 50, 200); //the second question
+
+      text("a) PA", 100, 300); // answere 1
+
+      text("b) Subdub", 100, 350); // answere 2
 
       text("c) Tomas Plekanec", 100, 400);// answere 3
     }
@@ -139,25 +149,47 @@ void keyPressed() {
       timer = 60;                // the timer is equal to 60 seconds
     }
   }
-  
+
   if (q == 4) {
     if (key == 'a' && timer < 3) { // if the key a is pressed and the timer is equal to 1 
       fill(#FF0009);              // the text is that color   
-      text("Incorrect", 300, 300); // the computer will print the text correct if the b key is pressed
+      text("Incorrect", 400, 300); // the computer will print the text correct if the b key is pressed
       timer = 60;               // the timer is equal to 60 seconds
     }
 
     if (key == 'b' && timer < 3) { // if the key b is pressed and the timer is equal to 1 
       fill(#00FF2C);              // the text is that color   
-      text("Correct", 300, 350);// the computer will print the text correct if the b key is pressed
+      text("Correct", 400, 350);// the computer will print the text correct if the b key is pressed
       timer = 60;                // the timer is equal to 60 seconds
       score = score + 1;        //Score equals score + 1 if the answere is correct
     }
 
     if (key == 'c' && timer < 3) { // if the key c is pressed and the timer is equal to 1 
       fill(#FF0009);               // the text is that color 
-      text("Incorrect", 300, 400);// the computer will print the text correct if the b key is pressed
+      text("Incorrect", 400, 400);// the computer will print the text correct if the b key is pressed
       timer = 60;                // the timer is equal to 60 seconds
+    }
   }
+    
+  if (q == 5) {
+    if (key == 'a' && timer < 5) { // if the key a is pressed and the timer is equal to 1 
+      fill(#FF0009);              // the text is that color   
+      text("Incorrect", 400, 300); // the computer will print the text correct if the b key is pressed
+      timer = 60;               // the timer is equal to 60 seconds
+    }
+
+    if (key == 'b' && timer < 5) { // if the key b is pressed and the timer is equal to 1 
+      fill(#FF0009);              // the text is that color   
+      text("Incorrect", 400, 350);// the computer will print the text correct if the b key is pressed
+      timer = 60;                // the timer is equal to 60 seconds
+      score = score + 1;        //Score equals score + 1 if the answere is correct
+    }
+
+    if (key == 'c' && timer < 5) { // if the key c is pressed and the timer is equal to 1 
+      fill(#00FF2C);               // the text is that color 
+      text("Correct", 400, 400);// the computer will print the text correct if the b key is pressed
+      timer = 60;                // the timer is equal to 60 seconds
+    }
   }
+
 }
