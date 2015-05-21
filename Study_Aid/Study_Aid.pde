@@ -19,10 +19,10 @@ void setup() {
   fill(#000000); //color of the text
 
   textSize(25); //size of the text
-
   if (q == 2) { //if the question is equal to 2
   }
 }
+
 
 void draw() {
   if (timer == 0) { //the timer begins after a key is pressed
@@ -30,6 +30,7 @@ void draw() {
     q += 1; //if the question is + of equal to 1
     fill(0); // the fill is white
     text("Science Quiz", 200, 50); //title of the quiz
+    text("Score", 200, 100);
 
     if (q == 1) { //if the question is equal to one
       text("1) What is Carey's last name", 50, 200); //the first question
