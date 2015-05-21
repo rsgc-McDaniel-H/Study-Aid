@@ -31,7 +31,7 @@ void draw() {
     q += 1; //if the question is + of equal to 1
     fill(0); // the fill is white
     text("Science Quiz", 210, 50); //title of the quiz
-    text("Score: " + score, 210, 100);
+    text("Score: " + score, 210, 100); //the position of the score text on the screen
 
     if (q == 1) { //if the question is equal to one
       text("1) What is Carey's last name", 50, 200); //the first question
@@ -72,7 +72,9 @@ void keyPressed() {
       fill(#00FF2C);               // the text is that color 
       text("Correct", 300, 350);  // the computer will print the text correct if the b key is pressed
       timer = 60;                // the timer is equal to 60 seconds
+      score = score + 1;        //Score equals score + 1 if the answere is correct
     }
+
 
     if (key == 'a' && timer < 0) { // if the key a is pressed and the timer is equal to 0 
       fill(#FF0009);              // the text is that color 
@@ -91,8 +93,8 @@ void keyPressed() {
     if (key == 'a' && timer < 1) { // if the key a is pressed and the timer is equal to 1 
       fill(#00FF2C);              // the text is that color   
       text("Correct", 300, 300); // the computer will print the text correct if the b key is pressed
-     score = score + 1;
-     timer = 60;  // the timer is equal to 60 seconds
+      score = score + 1;        //Score equals score + 1 if the answere is correct
+      timer = 60;              // the timer is equal to 60 seconds
     }
 
     if (key == 'b' && timer < 1) { // if the key b is pressed and the timer is equal to 1 
@@ -118,6 +120,7 @@ void keyPressed() {
       fill(#00FF2C);              // the text is that color   
       text("Correct", 300, 350);// the computer will print the text correct if the b key is pressed
       timer = 60;                // the timer is equal to 60 seconds
+      score = score + 1;        //Score equals score + 1 if the answere is correct
     }
 
     if (key == 'c' && timer < 2) { // if the key c is pressed and the timer is equal to 1 
