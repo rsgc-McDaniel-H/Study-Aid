@@ -8,6 +8,7 @@ int correct = 0;
 int Score = 0;
 int q = 0;
 int timer = 0;
+int score = 0;
 
 void setup() {
 
@@ -29,8 +30,8 @@ void draw() {
     background(255); //the background of the game 
     q += 1; //if the question is + of equal to 1
     fill(0); // the fill is white
-    text("Science Quiz", 200, 50); //title of the quiz
-    text("Score", 200, 100);
+    text("Science Quiz", 210, 50); //title of the quiz
+    text("Score: " + score, 210, 100);
 
     if (q == 1) { //if the question is equal to one
       text("1) What is Carey's last name", 50, 200); //the first question
@@ -90,7 +91,8 @@ void keyPressed() {
     if (key == 'a' && timer < 1) { // if the key a is pressed and the timer is equal to 1 
       fill(#00FF2C);              // the text is that color   
       text("Correct", 300, 300); // the computer will print the text correct if the b key is pressed
-      timer = 60;               // the timer is equal to 60 seconds
+     score = score + 1;
+     timer = 60;  // the timer is equal to 60 seconds
     }
 
     if (key == 'b' && timer < 1) { // if the key b is pressed and the timer is equal to 1 
